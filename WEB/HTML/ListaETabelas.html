@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--ordenada-->
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+
+    <hr>
+
+    <!--Desordenada-->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <hr>
+
+    <!--Descrição-->
+    <dl>
+        <dt>gabriel</dt>
+        <dd>Lindo demais</dd>
+    </dl>
+
+    <hr>
+
+    <!--Tabela Simples-->
+    <table>
+        <thead>
+            <th>nome</th>
+            <th>idade</th>
+        </thead>
+        <tr>
+            <td>gd</td>
+            <td>19</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!--tabela complexa-->
+    <table border="1">
+        <caption>p x v</caption>
+        
+        <colgroup>
+            <col>
+            <col span="2" style="background-color: red;">
+            <col span="2" style="background-color: blue;">
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th rowspan="2"></th>
+                <th colspan="2" scope="colgroup">l1</th>
+                <th colspan="2" scope="colgroup">l2</th>
+            </tr>
+
+            <tr>
+                <th scope="col">p</th>
+                <th scope="col">v</th>
+                <th scope="col">p</th>
+                <th scope="col">v</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="row">a</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <th scope="row">b</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+</body>
+</html>

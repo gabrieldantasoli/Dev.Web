@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+        }
+        h1{
+            margin: auto;
+            text-align: center;
+        }
+        img{
+            width: 100%;
+            display: block;
+        }
+
+        /*flexbox*/
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .flex > div{
+            flex: 1 1 200px;
+            margin: 10px;
+        }
+
+
+
+        /*grid*/
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            max-width: 780px;
+            grid-gap: 10px;
+            margin: 0 auto;
+        }
+        .grid > div:nth-child(n + 4 ) {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 10px;
+            align-items: center;
+        }
+
+        .grid > div:last-child{
+            grid-column: 1;
+            grid-row: 2 / 5;
+            display: block;
+            background-color: brown;
+            padding: 5px;
+            /*
+            order: -1;
+            grid-column: auto;
+            grid-row: auto;
+            */
+        }
+
+        /* caso precise deixar acessivel , usar media querye ou outra forma */
+
+        /* grid template area */
+        .gridT{
+            display: grid;
+            grid-template-columns: repeat(4,25%);
+            grid-template-rows: repeat(4,25%);
+            border: 2px solid black;
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 1 / 1;
+            margin: auto;
+            border-radius: 20px;
+
+            grid-template-areas: 
+                "a a a a"
+                "b c d d"
+                "e e f f"
+                "h g g g"
+            ;
+        }
+        
+        .item{
+            background-color: green;
+            border-radius: 15px;
+            margin: 5px;
+        }
+        .item:nth-child(1) {
+            grid-area: a;
+        }
+        .item:nth-child(2) {
+            grid-area: b;
+        }
+        .item:nth-child(3) {
+            grid-area: c;
+        }
+        .item:nth-child(4) {
+            grid-area: d;
+        }
+        .item:nth-child(5) {
+            grid-area: e;
+        }
+        .item:nth-child(6) {
+            grid-area: f;
+        }
+        .item:nth-child(7) {
+            grid-area: g;
+        }
+        .item:nth-child(8) {
+            grid-area: h;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>section flexbox</h1>
+    <section class="flex">
+        <div>
+            <img src="../images/080404.webp" alt="">
+        </div>
+        <div>
+            <img src="../images/080404.webp" alt="">
+        </div>
+        <div>
+            <img src="../images/080404.webp" alt="">
+        </div>
+        <div>
+            <img src="../images/080404.webp" alt="">
+        </div>
+        <div>
+            <img src="../images/080404.webp" alt="">
+        </div>
+        <div>
+            <img src="../images/080404.webp" alt="">
+        </div>
+    </section>
+
+
+
+    <h1>section grid</h1>
+    <section class="grid">
+        <div>
+            <img src="../images/080404.webp" alt="">
+        </div>
+        <div>
+            <img src="../images/080404.webp" alt="">
+        </div>
+        <div>
+            <img src="../images/080404.webp" alt="">
+        </div>
+        <div>
+            <img src="../images/080404.webp" alt="">
+        </div>
+        <div>
+            <img src="../images/080404.webp" alt="">
+        </div>
+        <div>
+            <img src="../images/080404.webp" alt="">
+        </div>
+        <div>
+            <img src="../images/080404.webp" alt="">
+        </div>
+        <div>
+            <img src="../images/080404.webp" alt="">
+        </div>
+        <div>
+            <img src="../images/080404.webp" alt="">
+        </div>
+        <div>
+            <img src="../images/080404.webp" alt="">
+    </section>
+
+    <h1>grid template area</h1>
+    <section class="gridT">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </section>
+</body>
+</html>
